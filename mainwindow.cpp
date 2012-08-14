@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    #ifdef Q_WS_MAC
+        QMainWindow::setUnifiedTitleAndToolBarOnMac(true);
+    #endif
 }
 
 MainWindow::~MainWindow()

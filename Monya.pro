@@ -11,17 +11,19 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    class/utils.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    class/utils.h
 
 FORMS    += mainwindow.ui
 
 #ifdef Q_WS_WIN
-    win32:RC_FILE = icon.rc
+    win32:RC_FILE = resource/icons/icon.rc
 #endif
 
 #ifdef Q_WS_MAC
-    ICON = img/icons/icon.icns
+    ICON = resource/icons/icon.icns
 #endif
 
